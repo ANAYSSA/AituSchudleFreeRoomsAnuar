@@ -62,7 +62,8 @@ body::after {
   z-index:0;
 }
 
-.wrap { position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:32px 24px }
+.wrap { position:relative; z-index:1; max-width:1280px; margin:0 auto; padding:24px 16px }
+a { color:inherit; text-decoration:none; }
 
 /* Header */
 .header {
@@ -93,6 +94,8 @@ body::after {
   transition:color 0.2s;
 }
 .header-meta a:hover { color:var(--text) }
+.badge-author a { color:#60a5fa; font-weight:500; }
+.badge-author a:hover { color:#93c5fd; }
 .badge-author {
   background: var(--glass);
   border: 1px solid var(--glass-border);
