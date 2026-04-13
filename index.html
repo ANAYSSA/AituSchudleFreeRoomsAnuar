@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#050509">
-<meta name="description" content="Свободные кабинеты AITU — 3-й триместр">
-<title>Rooms · AITU</title>
+<meta name="description" content="AITU Seeker — find free classrooms, groups, teachers">
+<title>AITU Seeker</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0iIzA1MDUwOSIvPgogIDxyZWN0IHg9IjQiIHk9IjUiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCIgcng9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNGY4ZWY3IiBzdHJva2Utd2lkdGg9IjEuOCIvPgogIDxyZWN0IHg9IjE4IiB5PSI1IiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHJ4PSIyLjUiIGZpbGw9IiM0ZjhlZjciIG9wYWNpdHk9IjAuMjUiLz4KICA8bGluZSB4MT0iOSIgeTE9IjE1IiB4Mj0iOSIgeTI9IjI3IiBzdHJva2U9IiM0ZjhlZjciIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjQiLz4KICA8bGluZSB4MT0iMjMiIHkxPSIxNSIgeDI9IjIzIiB5Mj0iMjciIHN0cm9rZT0iIzNlY2Y4ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNCIvPgogIDxyZWN0IHg9IjQiIHk9IjE5IiB3aWR0aD0iMTAiIGhlaWdodD0iOCIgcng9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2VjZjhlIiBzdHJva2Utd2lkdGg9IjEuOCIvPgogIDxyZWN0IHg9IjE4IiB5PSIxOSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjgiIHJ4PSIyLjUiIGZpbGw9IiMzZWNmOGUiIG9wYWNpdHk9IjAuMiIvPgo8L3N2Zz4=">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@ a{color:inherit;text-decoration:none}
 
 /* header */
 .hdr{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:28px}
-.hdr h1{font-size:clamp(32px,6vw,48px);font-weight:300;letter-spacing:-.6px;line-height:1.15}
+.hdr h1{font-size:clamp(38px,8vw,52px);font-weight:300;letter-spacing:-.6px;line-height:1.15}
 .hdr h1 em{font-style:normal;font-weight:500;color:var(--blue)}
 .hdr-sub{font-size:12px;color:var(--t3);margin-top:4px;letter-spacing:.4px}
 .hdr-r{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding-top:2px}
@@ -272,6 +272,64 @@ a{color:inherit;text-decoration:none}
   font-size:11px;color:var(--blue);margin-top:6px;cursor:pointer;transition:background .2s}
 .stud-badge:hover{background:rgba(79,142,247,.25)}
 /* student search result card */
+
+/* ── light theme ── */
+body.light{
+  --bg:#f0f0f5;--bg2:#e8e8f0;
+  --glass:rgba(255,255,255,0.7);--glass-h:rgba(255,255,255,0.9);
+  --bd:rgba(0,0,0,0.1);--bd-h:rgba(0,0,0,0.2);
+  --text:#0f0f1a;--t2:rgba(15,15,26,0.55);--t3:rgba(15,15,26,0.35);
+  --blue:#2563eb;--blue-d:rgba(37,99,235,0.12);
+  --green:#059669;--green-d:rgba(5,150,105,0.1);
+  --amber:#d97706;--amber-d:rgba(217,119,6,0.1);
+  --red:#dc2626;--red-d:rgba(220,38,38,0.1);
+}
+body.light .amb-1,body.light .amb-2,body.light .amb-3{opacity:.4}
+body.light .ctrl select option{background:#fff;color:#0f0f1a}
+body.light .modal{background:#f5f5fa}
+body.light .modal-hdr{background:#f5f5fa}
+body.light .students-panel{background:rgba(255,255,255,.8)}
+body.light .stud-card{background:rgba(255,255,255,.8)}
+
+/* ── light theme text/color overrides ── */
+body.light .slot-t{color:rgba(15,15,26,.45)}
+body.light .card-name{color:#0f0f1a}
+body.light .card-cnt b{color:#0f0f1a}
+body.light .ms-t{color:rgba(15,15,26,.45)}
+body.light .tog-wrap{background:rgba(0,0,0,.06)}
+body.light .tog-wrap button.on{background:rgba(0,0,0,.12);color:#0f0f1a}
+body.light .tabs{background:rgba(0,0,0,.07)}
+body.light .tab.on{background:rgba(0,0,0,.12);color:#0f0f1a}
+body.light .ctrl select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='rgba(0,0,0,0.4)' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")}
+body.light .ctrl select,.body.light .ctrl input{background:rgba(0,0,0,.06)}
+body.light .stud-card{background:rgba(255,255,255,.9)}
+body.light .grp-tab{background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.12)}
+body.light .modal-bg{background:rgba(0,0,0,.5)}
+body.light .studModalBg{background:rgba(0,0,0,.5)}
+body.light .res-card{background:rgba(255,255,255,.7)}
+body.light .sched-day{background:rgba(255,255,255,.7)}
+body.light .stat{background:rgba(255,255,255,.7)}
+body.light .card{background:rgba(255,255,255,.65)}
+body.light .card:hover{background:rgba(255,255,255,.9)}
+body.light .back-btn{background:rgba(0,0,0,.07);border-color:rgba(0,0,0,.15);color:rgba(15,15,26,.6)}
+body.light .back-btn:hover{background:rgba(0,0,0,.12);color:#0f0f1a}
+body.light .student-item:hover{background:rgba(0,0,0,.05)}
+body.light .stud-res{background:rgba(255,255,255,.65)}
+body.light .stud-res:hover{background:rgba(255,255,255,.9)}
+body.light .students-panel{background:rgba(255,255,255,.75);border-color:rgba(0,0,0,.12)}
+body.light #studModal,body.light #modal{background:#f2f2f8}
+body.light #studModal .modal-hdr,body.light #modal .modal-hdr{background:#f2f2f8}
+body.light .modal-slot.free{background:rgba(5,150,105,.08)}
+body.light .hdr-sub{color:rgba(15,15,26,.45)}
+body.light .theme-btn{border-color:rgba(0,0,0,.2)}
+
+.theme-btn{background:var(--glass);border:1px solid var(--bd);
+  backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
+  border-radius:100px;width:34px;height:34px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,border-color .2s;flex-shrink:0}
+.theme-btn:hover{background:var(--glass-h);border-color:var(--bd-h)}
+
 .stud-res{background:var(--glass);border:1px solid var(--bd);border-radius:var(--r);
   padding:13px 16px;margin-bottom:8px;cursor:pointer;
   transition:background .2s,border-color .2s;display:flex;align-items:center;gap:12px}
@@ -321,8 +379,8 @@ a{color:inherit;text-decoration:none}
   .tog-wrap button{flex:1}
   .grid{grid-template-columns:1fr}
   .sched-grid{grid-template-columns:1fr}
-  .tabs{width:100%}
-  .tab{flex:1;text-align:center}
+  .tabs{width:100%;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .tabs::-webkit-scrollbar{display:none}
   .amb-1,.amb-2,.amb-3{display:none}
 }
 </style>
@@ -333,8 +391,8 @@ a{color:inherit;text-decoration:none}
 <main class="page">
 <header class="hdr">
   <div>
-    <h1>Свободные <em>кабинеты</em></h1>
-    <p class="hdr-sub">AITU &nbsp;·&nbsp; 3-й триместр &nbsp;·&nbsp; 1–2 курс &nbsp;·&nbsp; 99 кабинетов</p>
+    <h1>AITU <em>Seeker</em></h1>
+    <p class="hdr-sub">Astana IT University &nbsp;·&nbsp; Trimester 3 &nbsp;·&nbsp; Year 1–2 &nbsp;·&nbsp; 99 rooms</p>
   </div>
   <div class="hdr-r">
     <a href="https://yuujiso.github.io/aitumap/" target="_blank" rel="noopener" class="chip chip-map">
@@ -343,15 +401,18 @@ a{color:inherit;text-decoration:none}
     </a>
     <div class="chip">
   made by <strong>Anuar</strong> <a href="https://t.me/Anuaric8" target="_blank" rel="noopener">@Anuaric8</a>
+  <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">
+    <svg id="themeIcon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
 </div>
 </header>
 
 <!-- Nav tabs -->
 <div class="tabs">
-  <button class="tab on" onclick="showSection('rooms')">Кабинеты</button>
-  <button class="tab" onclick="showSection('groups')">Группы</button>
-  <button class="tab" onclick="showSection('teachers')">Преподаватели</button>
-  <button class="tab" onclick="showSection('students')">Студенты</button>
+  <button class="tab on" onclick="showSection('rooms')">Rooms</button>
+  <button class="tab" onclick="showSection('groups')">Groups</button>
+  <button class="tab" onclick="showSection('teachers')">Teachers</button>
+  <button class="tab" onclick="showSection('students')">Students</button>
 </div>
 
 <!-- ═══ ROOMS SECTION ═══ -->
@@ -364,27 +425,27 @@ a{color:inherit;text-decoration:none}
     <div class="ctrl">
       <span class="clabel">Слот</span>
       <select id="slotSelect">
-        <option value="all">Все слоты</option>
+        <option value="all">All slots</option>
         <option value="08:00-08:50">08:00-08:50</option><option value="09:00-09:50">09:00-09:50</option><option value="10:00-10:50">10:00-10:50</option><option value="11:00-11:50">11:00-11:50</option><option value="12:00-12:50">12:00-12:50</option><option value="13:05-13:55">13:05-13:55</option><option value="14:00-14:50">14:00-14:50</option><option value="15:00-15:50">15:00-15:50</option><option value="16:00-16:50">16:00-16:50</option><option value="17:00-17:50">17:00-17:50</option><option value="18:00-18:50">18:00-18:50</option><option value="19:00-19:50">19:00-19:50</option>
       </select>
     </div>
     <div class="ctrl">
       <span class="clabel">Блок</span>
       <select id="blockSelect">
-        <option value="all">Все блоки</option>
-        <option value="1">Блок 1</option>
-        <option value="2">Блок 2</option>
-        <option value="3">Блок 3</option>
+        <option value="all">All blocks</option>
+        <option value="1">Block 1</option>
+        <option value="2">Block 2</option>
+        <option value="3">Block 3</option>
         <option value="IEC">IEC</option>
       </select>
     </div>
     <div class="ctrl">
       <span class="clabel">Этаж</span>
       <select id="floorSelect">
-        <option value="all">Все этажи</option>
-        <option value="1">Этаж 1</option>
-        <option value="2">Этаж 2</option>
-        <option value="3">Этаж 3</option>
+        <option value="all">All floors</option>
+        <option value="1">Floor 1</option>
+        <option value="2">Floor 2</option>
+        <option value="3">Floor 3</option>
       </select>
     </div>
     <div class="ctrl ctrl-s">
@@ -394,17 +455,17 @@ a{color:inherit;text-decoration:none}
     <div class="ctrl">
       <span class="clabel">Статус</span>
       <select id="filterStatus">
-        <option value="all">Все</option>
-        <option value="free">Свободные</option>
-        <option value="partial">Частично</option>
-        <option value="busy">Занятые</option>
+        <option value="all">All</option>
+        <option value="free">Free</option>
+        <option value="partial">Partial</option>
+        <option value="busy">Busy</option>
       </select>
     </div>
     <div class="ctrl">
       <span class="clabel">Вид</span>
       <div class="tog-wrap">
-        <button id="btnCards" class="on" onclick="setView('cards')">Карточки</button>
-        <button id="btnTable" onclick="setView('table')">Таблица</button>
+        <button id="btnCards" class="on" onclick="setView('cards')">Cards</button>
+        <button id="btnTable" onclick="setView('table')">Table</button>
       </div>
     </div>
   </div>
@@ -417,7 +478,7 @@ a{color:inherit;text-decoration:none}
 <div id="sec-groups" class="hidden">
   <div class="srch-box">
     <svg class="srch-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" id="groupSearch" placeholder="Поиск группы: SE-2507, CS-25…" autocomplete="off">
+    <input type="text" id="groupSearch" placeholder="Search group: SE-2507, CS-25…" autocomplete="off">
   </div>
   <div id="groupList"></div>
   <div id="groupDetail" class="hidden">
@@ -433,13 +494,13 @@ a{color:inherit;text-decoration:none}
 <div id="sec-teachers" class="hidden">
   <div class="srch-box">
     <svg class="srch-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" id="teacherSearch" placeholder="Имя преподавателя…" autocomplete="off">
+    <input type="text" id="teacherSearch" placeholder="Teacher name…" autocomplete="off">
   </div>
   <div id="teacherList"></div>
   <div id="teacherDetail" class="hidden">
     <button class="back-btn" onclick="backToTeachers()">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-      Все преподаватели
+      All teachers
     </button>
     <div id="teacherDetailContent"></div>
   </div>
@@ -449,9 +510,9 @@ a{color:inherit;text-decoration:none}
 <div id="sec-students" class="hidden">
   <div class="srch-box">
     <svg class="srch-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" id="studentSearch" placeholder="Введите имя студента кириллицей…" autocomplete="off">
+    <input type="text" id="studentSearch" placeholder="Search student by name…" autocomplete="off">
   </div>
-  <div id="studentList"><div class="no-res" style="padding-top:32px">Начните вводить имя для поиска</div></div>
+  <div id="studentList"><div class="no-res" style="padding-top:32px">Start typing to search</div></div>
   <div id="studentDetail" class="hidden">
     <button class="back-btn" onclick="backToStudents()">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
@@ -462,8 +523,22 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <footer class="footer">
-  Расписание 3-го триместра 2025–2026 &nbsp;·&nbsp; <a href="https://yuujiso.github.io/aitumap/" target="_blank">Карта AITU</a>
+  Schedule · Trimester 3 · 2025–2026 &nbsp;·&nbsp; <a href="https://yuujiso.github.io/aitumap/" target="_blank">AITU Map</a>
 </footer>
+
+<!-- Student info modal -->
+<div class="modal-bg" id="studModalBg" onclick="closeStudModal(event)">
+  <div class="modal" id="studModal">
+    <div class="modal-hdr">
+      <div>
+        <div class="modal-title" id="studModalTitle"></div>
+        <div class="modal-sub" id="studModalSub"></div>
+      </div>
+      <button class="modal-close" onclick="closeStudModalDirect()">✕</button>
+    </div>
+    <div class="modal-body" id="studModalBody"></div>
+  </div>
+</div>
 </main>
 
 <!-- Modal: full day for room -->
@@ -500,7 +575,7 @@ function showSection(s) {
   });
   if(s==='groups') renderGroupList();
   if(s==='teachers') renderTeacherList();
-  if(s==='students') { $('studentList').innerHTML='<div class="no-res" style="padding-top:32px">Начните вводить имя для поиска</div>'; $('studentSearch').focus(); }
+  if(s==='students') { $('studentList').innerHTML='<div class="no-res" style="padding-top:32px">Start typing to search</div>'; $('studentSearch').focus(); }
 }
 
 // ── Room utilities ──
@@ -560,15 +635,15 @@ function updateStats(list,p){
   const nF = list.filter(c=>slots.every(s=>gs(p.day,c).free.includes(s))).length;
   const nB = list.filter(c=>slots.every(s=>!gs(p.day,c).free.includes(s))).length;
   const nP = list.length-nF-nB;
-  $('statsBar').innerHTML=[['c-blue',list.length,'всего'],['c-green',nF,'свободны'],
-    ['c-amber',nP,'частично'],['c-red',nB,'заняты']]
+  $('statsBar').innerHTML=[['c-blue',list.length,'total'],['c-green',nF,'free'],
+    ['c-amber',nP,'partial'],['c-red',nB,'busy']]
     .map(([cl,n,lb])=>`<div class="stat"><div class="stat-n ${cl}">${n}</div><div class="stat-l">${lb}</div></div>`).join('');
 }
 
 function slotRows(s,slots,withLect){
   return slots.map(sl=>{
     if(s.free.includes(sl))
-      return `<div class="slot-row"><span class="slot-t">${sl}</span><span class="slot-free">свободно</span></div>`;
+      return `<div class="slot-row"><span class="slot-t">${sl}</span><span class="slot-free">free</span></div>`;
     const occ=s.occupied.filter(o=>o.time===sl);
     const disc=[...new Set(occ.map(o=>o.discipline))][0]||'';
     const lect=[...new Set(occ.map(o=>o.lecturer).filter(Boolean))][0]||'';
@@ -590,15 +665,15 @@ function render(){
 
 function renderCards(list,p){
   const con=$('viewCards');
-  if(!list.length){con.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:48px 0;color:var(--t3);font-size:14px">Нет кабинетов по фильтру</div>';return;}
+  if(!list.length){con.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:48px 0;color:var(--t3);font-size:14px">No rooms match the filter</div>';return;}
   const slots=p.slot==='all'?D.slots:[p.slot];
   con.innerHTML=list.map(c=>{
     const s=gs(p.day,c);
     const fc=slots.filter(sl=>s.free.includes(sl)).length;
-    const [pc,pt]=fc===slots.length?['pill-free','свободен']:fc===0?['pill-busy','занят']:['pill-part','частично'];
+    const [pc,pt]=fc===slots.length?['pill-free','free']:fc===0?['pill-busy','busy']:['pill-part','partial'];
     return `<div class="card" onclick="openModal('${c}','${p.day}')">
       <div class="card-top"><span class="card-name">${c}</span><span class="pill ${pc}">${pt}</span></div>
-      <div class="card-cnt"><b>${fc}</b> / ${slots.length} слотов свободно</div>
+      <div class="card-cnt"><b>${fc}</b> / ${slots.length} slots free</div>
       <div class="slot-list">${slotRows(s,slots,true)}</div>
     </div>`;
   }).join('');
@@ -606,7 +681,7 @@ function renderCards(list,p){
 
 function renderTable(list,p){
   const con=$('viewTable');
-  if(!list.length){con.innerHTML='<div style="padding:40px;text-align:center;color:var(--t3)">Нет кабинетов</div>';return;}
+  if(!list.length){con.innerHTML='<div style="padding:40px;text-align:center;color:var(--t3)">No rooms</div>';return;}
   const slots=p.slot==='all'?D.slots:[p.slot];
   const head=`<tr><th>Кабинет</th>${slots.map(s=>`<th>${s}</th>`).join('')}</tr>`;
   const body=list.map(c=>{
@@ -627,7 +702,7 @@ function renderTable(list,p){
 function openModal(room, day){
   const s=gs(day,room);
   $('modalTitle').textContent=room;
-  $('modalSub').textContent=`Весь день · ${day}`;
+  $('modalSub').textContent=`All day · ${day}`;
 
   let html='';
   // group by free vs occupied
@@ -641,7 +716,7 @@ function openModal(room, day){
       <span class="ms-t">${sl}</span>
       <div>
         ${isFree
-          ?'<span class="ms-free">свободно</span>'
+          ?'<span class="ms-free">free</span>'
           :`<div class="ms-disc">${disc}</div>
            ${lect?`<div class="ms-meta lect-link" onclick="closeModalDirect();openTeacher('${lect}')">${lect}</div>`:''}
            <div class="ms-grps">${grps.map(g=>`<span class="grp-tag" style="cursor:pointer" onclick="closeModalDirect();openGroup('${g}')">${g}</span>`).join('')}</div>`
@@ -661,13 +736,13 @@ function closeModalDirect(){
   $('modalBg').classList.remove('open');
   document.body.style.overflow='';
 }
-document.addEventListener('keydown',e=>{if(e.key==='Escape') closeModalDirect();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModalDirect();closeStudModalDirect();}});
 
 // ── Groups ──
 function renderGroupList(){
   const q=$('groupSearch').value.toLowerCase().trim();
   const groups=Object.keys(D.groups).filter(g=>!q||g.toLowerCase().includes(q)).sort();
-  if(!groups.length){$('groupList').innerHTML='<div class="no-res">Группа не найдена</div>';return;}
+  if(!groups.length){$('groupList').innerHTML='<div class="no-res">Group not found</div>';return;}
 
   $('groupList').innerHTML=groups.map(g=>{
     const sched=D.groups[g];
@@ -698,7 +773,7 @@ function openGroup(g, defaultTab){
   }
 
   function buildSchedHtml(){
-    if(!days.length) return '<div class="no-res">Расписание не найдено</div>';
+    if(!days.length) return '<div class="no-res">Schedule not found</div>';
     let h='<div class="sched-grid">';
     days.forEach(day=>{
       const slots=[...sched[day]].sort((a,b)=>a.time.localeCompare(b.time));
@@ -717,15 +792,16 @@ function openGroup(g, defaultTab){
 
   function buildStudsHtml(q){
     const filtered=!q?studs:studs.filter(s=>s.name.toLowerCase().includes(q));
-    if(!studs.length) return '<div class="no-res">Список студентов недоступен</div>';
-    if(!filtered.length) return '<div class="no-res">Студентов не найдено</div>';
-    return filtered.map((s,i)=>`<div class="student-item">
+    if(!studs.length) return '<div class="no-res">Student list unavailable</div>';
+    if(!filtered.length) return '<div class="no-res">No students found</div>';
+    return filtered.map((s,i)=>{ const ds=JSON.stringify({...s,group:g}).replace(/'/g,"&#39;"); return `<div class="student-item" style="cursor:pointer" onclick="openStudentDetail(this)" data-student='${ds}'>
       <span class="student-num">${i+1}</span>
       <div class="student-info">
         <div class="student-name">${s.name}</div>
         ${s.email?`<div class="student-email">${s.email}</div>`:''}
       </div>
-    </div>`).join('');
+      <svg style="flex-shrink:0;opacity:.3" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    </div>`; }).join('');
   }
 
   function render(){
@@ -738,7 +814,7 @@ function openGroup(g, defaultTab){
     } else {
       const sid='grp-stud-srch';
       body.innerHTML=`<div class="students-search" style="margin-bottom:12px">
-        <input type="text" id="${sid}" placeholder="Поиск по имени…" autocomplete="off"
+        <input type="text" id="${sid}" placeholder="Search by name…" autocomplete="off"
           style="width:100%;background:rgba(255,255,255,.065);border:1px solid var(--bd);
           border-radius:var(--rs);color:var(--text);font-family:inherit;font-size:13px;
           padding:8px 12px;outline:none;transition:border-color .2s">
@@ -751,15 +827,15 @@ function openGroup(g, defaultTab){
     }
   }
 
-  const studsLabel=studs.length?`Студенты <span style="background:var(--blue-d);color:var(--blue);border-radius:100px;padding:1px 7px;font-size:10px;margin-left:4px">${studs.length}</span>`:'Студенты';
+  const studsLabel=studs.length?`Студенты <span style="background:var(--blue-d);color:var(--blue);border-radius:100px;padding:1px 7px;font-size:10px;margin-left:4px">${studs.length}</span>`:'Students';
 
   $('groupDetailContent').innerHTML=`
     <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:6px;flex-wrap:wrap">
       <div style="font-size:20px;font-weight:500;color:#f2f2fa">${g}</div>
-      <div style="font-size:12px;color:var(--t3)">3-й триместр</div>
+      <div style="font-size:12px;color:var(--t3)">Trimester 3</div>
     </div>
     <div class="grp-tabs" style="margin-bottom:18px">
-      <button class="grp-tab" id="grp-tab-sched" onclick="grpTabSwitch('schedule')">Расписание</button>
+      <button class="grp-tab" id="grp-tab-sched" onclick="grpTabSwitch('schedule')">Schedule</button>
       <button class="grp-tab" id="grp-tab-studs" onclick="grpTabSwitch('students')">${studsLabel}</button>
     </div>
     <div id="grp-tab-body"></div>`;
@@ -813,7 +889,7 @@ function openTeacher(name){
   entries.forEach(e=>{if(byDay[e.day]) byDay[e.day].push(e);});
 
   let html=`<div style="font-size:20px;font-weight:500;color:#f2f2fa;margin-bottom:4px">${name}</div>
-    <div style="font-size:12px;color:var(--t3);margin-bottom:18px">Расписание преподавателя</div>
+    <div style="font-size:12px;color:var(--t3);margin-bottom:18px">Teacher schedule</div>
     <div class="sched-grid">`;
 
   DAYS.forEach(day=>{
@@ -855,8 +931,8 @@ function renderStudentSearch(){
   const q=$('studentSearch').value.trim();
   const list=$('studentList');
   const detail=$('studentDetail');
-  if(!q){list.innerHTML='<div class="no-res" style="padding-top:32px">Начните вводить имя для поиска</div>';return;}
-  if(q.length<2){list.innerHTML='<div class="no-res" style="padding-top:32px">Введите минимум 2 символа</div>';return;}
+  if(!q){list.innerHTML='<div class="no-res" style="padding-top:32px">Start typing to search</div>';return;}
+  if(q.length<2){list.innerHTML='<div class="no-res" style="padding-top:32px">Enter at least 2 characters</div>';return;}
   const ql=q.toLowerCase();
   const results=[];
   Object.entries(STUDENTS).forEach(([grp,studs])=>{
@@ -866,8 +942,8 @@ function renderStudentSearch(){
   });
   list.classList.remove('hidden');
   detail.classList.add('hidden');
-  if(!results.length){list.innerHTML='<div class="no-res" style="padding-top:32px">Студенты не найдены</div>';return;}
-  list.innerHTML=`<div style="font-size:11px;color:var(--t3);margin-bottom:12px;letter-spacing:.3px">Найдено: ${results.length}</div>`+
+  if(!results.length){list.innerHTML='<div class="no-res" style="padding-top:32px">No students found</div>';return;}
+  list.innerHTML=`<div style="font-size:11px;color:var(--t3);margin-bottom:12px;letter-spacing:.3px">Found: ${results.length}</div>`+
   results.slice(0,100).map(r=>{
     const barcode=r.email.split('@')[0]||'';
     const year=barcode.startsWith('24')?2:barcode.startsWith('25')?1:0;
@@ -878,7 +954,7 @@ function renderStudentSearch(){
         <div class="stud-res-name">${r.name}</div>
         <div class="stud-res-meta">
           <span>${r.group}</span>
-          ${year?`<span class="stud-res-badge ${year===1?'badge-1':'badge-2'}">${year} курс</span>`:''}
+          ${year?`<span class="stud-res-badge ${year===1?'badge-1':'badge-2'}">${year===1?'Year 1':'Year 2'}</span>`:''}
           ${barcode?`<span style="font-family:'Roboto Mono',monospace;font-size:10px;color:var(--t3);margin-left:6px">${barcode}</span>`:''}
         </div>
       </div>
@@ -888,62 +964,71 @@ function renderStudentSearch(){
 
 function openStudentDetail(el){
   const s=JSON.parse(el.dataset.student);
-  const barcode=s.email.split('@')[0]||'';
+  const barcode=s.email?s.email.split('@')[0]:'';
   const year=barcode.startsWith('24')?2:barcode.startsWith('25')?1:0;
   const ini=s.name.trim().split(/\s+/).slice(0,2).map(p=>p[0]||'').join('').toUpperCase();
-  const yearLabel=year===1?'1 курс (2025)':year===2?'2 курс (2024)':'';
+  const yearLabel=year===1?'Year 1 (2025)':year===2?'Year 2 (2024)':'';
   const yearBadgeCls=year===1?'badge-1':'badge-2';
 
-  $('studentList').classList.add('hidden');
-  $('studentDetail').classList.remove('hidden');
-  $('studentDetailContent').innerHTML=`
-    <div class="stud-card">
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px">
-        <div class="stud-avatar">${ini}</div>
-        <div>
-          <div class="stud-name-big">${s.name}</div>
-          ${yearLabel?`<span class="stud-res-badge ${yearBadgeCls}" style="font-size:11px;padding:3px 10px">${yearLabel}</span>`:''}
-        </div>
+  $('studModalTitle').textContent=s.name;
+  $('studModalSub').textContent=(s.group||'')+(yearLabel?' · '+yearLabel:'');
+
+  $('studModalBody').innerHTML=`
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px">
+      <div class="stud-avatar">${ini}</div>
+      <div>
+        <div style="font-size:16px;font-weight:500;color:#f2f2fa;line-height:1.3">${s.name}</div>
+        ${yearLabel?`<span class="stud-res-badge ${yearBadgeCls}" style="font-size:11px;padding:3px 10px;margin-top:4px;display:inline-block">${yearLabel}</span>`:''}
       </div>
-      <div class="stud-row">
-        <div class="stud-row-icon" style="background:var(--blue-d)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div>
-          <div class="stud-row-label">Группа</div>
-          <div class="stud-row-val">
-            <span style="cursor:pointer;color:var(--blue)" onclick="openGroup('${s.group}')">${s.group}</span>
-          </div>
-        </div>
+    </div>
+    <div class="stud-row">
+      <div class="stud-row-icon" style="background:var(--blue-d)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
       </div>
-      <div class="stud-row">
-        <div class="stud-row-icon" style="background:var(--green-d)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
-        <div>
-          <div class="stud-row-label">Курс</div>
-          <div class="stud-row-val">${yearLabel||'Неизвестно'}</div>
-        </div>
+      <div>
+        <div class="stud-row-label">Group</div>
+        <div class="stud-row-val" style="cursor:pointer;color:var(--blue)" onclick="closeStudModalDirect();openGroup('${s.group||''}')">${s.group||'—'}</div>
       </div>
-      <div class="stud-row">
-        <div class="stud-row-icon" style="background:rgba(245,166,35,.1)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="7" y1="4" x2="7" y2="20"/></svg>
-        </div>
-        <div>
-          <div class="stud-row-label">Баркод (ID)</div>
-          <div class="stud-row-val mono">${barcode}</div>
-        </div>
+    </div>
+    <div class="stud-row">
+      <div class="stud-row-icon" style="background:var(--green-d)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
       </div>
-      ${s.email?`<div class="stud-row">
-        <div class="stud-row-icon" style="background:rgba(242,107,107,.1)">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div>
-          <div class="stud-row-label">Email</div>
-          <div class="stud-row-val mono">${s.email}</div>
-        </div>
-      </div>`:''}
-    </div>`;
+      <div>
+        <div class="stud-row-label">Year</div>
+        <div class="stud-row-val">${yearLabel||'Unknown'}</div>
+      </div>
+    </div>
+    <div class="stud-row">
+      <div class="stud-row-icon" style="background:rgba(245,166,35,.1)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="7" y1="4" x2="7" y2="20"/></svg>
+      </div>
+      <div>
+        <div class="stud-row-label">Barcode (ID)</div>
+        <div class="stud-row-val mono">${barcode||'—'}</div>
+      </div>
+    </div>
+    ${s.email?`<div class="stud-row">
+      <div class="stud-row-icon" style="background:rgba(242,107,107,.1)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+      <div>
+        <div class="stud-row-label">Email</div>
+        <div class="stud-row-val mono">${s.email}</div>
+      </div>
+    </div>`:''}
+  `;
+
+  $('studModalBg').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeStudModal(e){
+  if(e.target===$('studModalBg')) closeStudModalDirect();
+}
+function closeStudModalDirect(){
+  $('studModalBg').classList.remove('open');
+  document.body.style.overflow='';
 }
 
 function backToStudents(){
@@ -956,6 +1041,24 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(si) si.addEventListener('input', renderStudentSearch);
 });
 
+
+// ── Theme toggle ──
+function toggleTheme(){
+  const isLight=document.body.classList.toggle('light');
+  localStorage.setItem('theme',isLight?'light':'dark');
+  updateThemeIcon(isLight);
+}
+function updateThemeIcon(isLight){
+  const icon=$('themeIcon');
+  if(!icon) return;
+  icon.innerHTML=isLight
+    ?'<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'
+    :'<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+}
+(function(){
+  const saved=localStorage.getItem('theme');
+  if(saved==='light'){document.body.classList.add('light');updateThemeIcon(true);}
+})();
 </script>
 </body>
 </html>
